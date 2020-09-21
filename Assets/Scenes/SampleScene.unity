@@ -152,13 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200a83d6cac57ac4a9eb04f3583d948c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 100, y: 100}
+  closeCells: 5
+  size: {x: 10, y: 10}
   resolution: 0.5
   minHeight: 0
-  maxHeight: 1
+  maxHeight: 3
   noiseOffsetSeed: 12345
-  zoom: 1
-  vertexCount: 0
+  zoom: 3
+  player: {fileID: 0}
+  requestCalculate: 1
 --- !u!4 &75727241
 Transform:
   m_ObjectHideFlags: 0
