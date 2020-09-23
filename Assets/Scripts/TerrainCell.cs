@@ -31,7 +31,7 @@ public class TerrainCell : MonoBehaviour
 
     private void PrepareMesh() {
         meshRenderer = gameObject.AddComponent<MeshRenderer>();
-        meshRenderer.sharedMaterial = new Material(Shader.Find("Standard"));
+        meshRenderer.sharedMaterial = tg.grass;
 
         meshFilter = gameObject.AddComponent<MeshFilter>();
     }

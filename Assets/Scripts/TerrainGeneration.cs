@@ -25,6 +25,9 @@ public class TerrainGeneration : MonoBehaviour
     [SerializeField]
     private Transform player;
 
+    [SerializeField]
+    public Material grass;
+
     private float xCellBuffer;
     
     public bool requestCalculate;

@@ -160,6 +160,7 @@ MonoBehaviour:
   noiseOffsetSeed: 12345
   zoom: 7
   player: {fileID: 286422248}
+  grass: {fileID: 2100000, guid: 0dc6431f5f116f945a53667740f41eb6, type: 2}
   requestCalculate: 1
 --- !u!4 &75727241
 Transform:
