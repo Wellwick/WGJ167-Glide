@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200a83d6cac57ac4a9eb04f3583d948c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellRangeBuffer: 20
+  cellRangeBuffer: {x: 25, y: 20}
   size: {x: 10, y: 10}
   resolution: 0.5
   minHeight: 0

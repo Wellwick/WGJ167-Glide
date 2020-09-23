@@ -5,7 +5,7 @@ using UnityEngine;
 public class TerrainGeneration : MonoBehaviour
 {
     [SerializeField]
-    private int cellRangeBuffer = 12;
+    private Vector2 cellRangeBuffer = new Vector2(20, 15);
 
     [SerializeField]
     public Vector2 size = new Vector2(100f,100f);
@@ -40,8 +40,8 @@ public class TerrainGeneration : MonoBehaviour
         xCellBuffer = player.position.x;
         float startX = xCellBuffer - (xCellBuffer % size.x);
         float startZ = player.position.z - (player.position.z % size.y);
-        for (float x = startX - (cellRangeBuffer*size.x); x < startX + (cellRangeBuffer*size.x); x += size.x) {
-            for (float z = startZ-size.y; z < startZ +(size.y*15f); z += size.y) {
+        for (float x = startX - (cellRangeBuffer.x*size.x); x < startX + (cellRangeBuffer.x*size.x); x += size.x) {
+            for (float z = startZ-size.y; z < startZ +(size.y* cellRangeBuffer.y); z += size.y) {
                 AddCell(new Vector2(x, z));
             }
         }
@@ -61,7 +61,7 @@ public class TerrainGeneration : MonoBehaviour
     }
 
     private void WipeLastColumn() {
-        float xPos = xCellBuffer - (xCellBuffer % size.x) - (cellRangeBuffer * size.x);
+        float xPos = xCellBuffer - (xCellBuffer % size.x) - (cellRangeBuffer.x * size.x);
         List<TerrainCell> clearing = new List<TerrainCell>();
         foreach (TerrainCell tc in cells) {
             if (tc.CellLocation().x == xPos) {
@@ -76,9 +76,9 @@ public class TerrainGeneration : MonoBehaviour
 
     private void AddColumn() {
 
-        float x = xCellBuffer - (xCellBuffer % size.x) + (cellRangeBuffer * size.x);
+        float x = xCellBuffer - (xCellBuffer % size.x) + (cellRangeBuffer.x * size.x);
         float startZ = player.position.z - (player.position.z % size.y);
-        for (float z = startZ - size.y; z < startZ + (size.y * 15f); z += size.y) {
+        for (float z = startZ - size.y; z < startZ + (size.y * cellRangeBuffer.y); z += size.y) {
             AddCell(new Vector2(x, z));
         }
         xCellBuffer += size.x;
