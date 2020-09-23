@@ -5,7 +5,7 @@ using UnityEngine;
 public class TerrainGeneration : MonoBehaviour
 {
     [SerializeField]
-    private int closeCells = 5;
+    private int cellRangeBuffer = 12;
 
     [SerializeField]
     public Vector2 size = new Vector2(100f,100f);
@@ -24,6 +24,8 @@ public class TerrainGeneration : MonoBehaviour
 
     [SerializeField]
     private Transform player;
+
+    private float xCellBuffer;
     
     public bool requestCalculate;
 
@@ -32,8 +34,14 @@ public class TerrainGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         cells = new List<TerrainCell>();
-        AddCell(Vector2.zero);
-        AddCell(new Vector2(10f,0f));
+        xCellBuffer = player.position.x;
+        float startX = xCellBuffer - (xCellBuffer % size.x);
+        float startZ = player.position.z - (player.position.z % size.y);
+        for (float x = startX - (cellRangeBuffer*size.x); x < startX + (cellRangeBuffer*size.x); x += size.x) {
+            for (float z = startZ-size.y; z < startZ +(size.y*15f); z += size.y) {
+                AddCell(new Vector2(x, z));
+            }
+        }
         requestCalculate = false;
     }
 
@@ -42,6 +50,35 @@ public class TerrainGeneration : MonoBehaviour
         TerrainCell tc = newObject.AddComponent<TerrainCell>();
         tc.PrepareTerrainCell(this);
         cells.Add(tc);
+    }
+
+    private void StepForward() {
+        WipeLastColumn();
+        AddColumn();
+    }
+
+    private void WipeLastColumn() {
+        float xPos = xCellBuffer - (xCellBuffer % size.x) - (cellRangeBuffer * size.x);
+        List<TerrainCell> clearing = new List<TerrainCell>();
+        foreach (TerrainCell tc in cells) {
+            if (tc.CellLocation().x == xPos) {
+                clearing.Add(tc);
+            }
+        }
+        foreach (TerrainCell tc in clearing) {
+            cells.Remove(tc);
+            Destroy(tc.gameObject);
+        }
+    }
+
+    private void AddColumn() {
+
+        float x = xCellBuffer - (xCellBuffer % size.x) + (cellRangeBuffer * size.x);
+        float startZ = player.position.z - (player.position.z % size.y);
+        for (float z = startZ - size.y; z < startZ + (size.y * 15f); z += size.y) {
+            AddCell(new Vector2(x, z));
+        }
+        xCellBuffer += size.x;
     }
 
     private void RemoveCell(TerrainCell cell) {
@@ -62,6 +99,9 @@ public class TerrainGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        while (xCellBuffer + 10 < player.position.x) {
+            StepForward();
+        }
         if (requestCalculate) {
             CalculateAllMeshes();
             requestCalculate = false;

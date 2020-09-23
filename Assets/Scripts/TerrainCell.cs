@@ -12,8 +12,15 @@ public class TerrainCell : MonoBehaviour
 
     public int vertexCount = 0;
 
+    private float resolution;
+
     public void PrepareTerrainCell(TerrainGeneration tg) {
         this.tg = tg;
+        if (transform.position.z >= 30f) {
+            resolution = tg.resolution * 4f;
+        } else {
+            resolution = tg.resolution;
+        }
         PrepareMesh();
         CalculateMesh();
     }
@@ -32,8 +39,8 @@ public class TerrainCell : MonoBehaviour
     public void CalculateMesh() {
         mesh = new Mesh();
         // Amount of vertices is equal to the width * depth / resolution
-        int width = (int)((tg.size.x + tg.resolution) / tg.resolution);
-        int depth = (int)((tg.size.y + tg.resolution) / tg.resolution);
+        int width = (int)((tg.size.x + resolution) / resolution);
+        int depth = (int)((tg.size.y + resolution) / resolution);
 
 
         Random.InitState(tg.noiseOffsetSeed);
@@ -41,13 +48,31 @@ public class TerrainCell : MonoBehaviour
         offset.x *= Random.value * 1000000;
         offset.y *= Random.value * 1000000;
 
+        Vector2 secondaryOffset = Vector2.one;
+        secondaryOffset.x *= Random.value * 1000000;
+        secondaryOffset.y *= Random.value * 1000000;
+
         Vector3[] vertices = new Vector3[width * depth];
         int i = 0;
-        for (float z = 0f; z <= tg.size.y; z += tg.resolution) {
-            for (float x = 0f; x <= tg.size.x; x += tg.resolution, i++) {
+        for (float z = 0f; z <= tg.size.y; z += resolution) {
+            float extraY = 0f;
+            float weighting = 0f;
+            // Scale y between 0 and 30 z so we have something in foreground lower than the place the player is moving through
+            float globalZ = z + transform.position.z;
+            if (globalZ <= 30f && globalZ >= 0f) {
+                extraY = ((30 * globalZ) - (globalZ * globalZ)) * 0.025f;
+            } else {
+                // We add on the secondary mesh
+                weighting = Mathf.Clamp((globalZ - 30), 0f, tg.maxHeight * tg.maxHeight * 100);
+            }
+
+            for (float x = 0f; x <= tg.size.x; x += resolution, i++) {
                 float localX = x + transform.position.x;
                 float localZ = z + transform.position.z;
-                float y = Mathf.Lerp(tg.minHeight, tg.maxHeight, Mathf.PerlinNoise((localX / tg.zoom) + offset.x, (localZ / tg.zoom) + offset.y));
+                if (globalZ > 30f) {
+                    extraY = weighting * Mathf.PerlinNoise((localX / (tg.zoom*10)) + secondaryOffset.x, (localZ / (tg.zoom * 10)) + secondaryOffset.y);
+                }
+                float y = Mathf.Lerp(tg.minHeight, tg.maxHeight, Mathf.PerlinNoise((localX / tg.zoom) + offset.x, (localZ / tg.zoom) + offset.y)) + extraY;
                 vertices[i] = new Vector3(x, y, z);
                 //vertices[i] = new Vector3(x, 0f, z);
             }
