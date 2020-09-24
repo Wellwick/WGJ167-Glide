@@ -98,9 +98,17 @@ public class TerrainCell : MonoBehaviour
             }
         }
         mesh.triangles = tris;
-
-        Vector3[] normals = new Vector3[width * depth];
+        
         mesh.RecalculateNormals();
+        // We need to do more work for this tbh
+        for (int z = 0; z < depth; z++) {
+            mesh.normals[z * width] = Vector3.up;
+            mesh.normals[z * width+width-1] = Vector3.up;
+        }
+        for (int x = 0; x < width; x++) {
+            mesh.normals[x * depth] = Vector3.up;
+            mesh.normals[x * depth + depth - 1] = Vector3.up;
+        }
 
         Vector2[] uv = new Vector2[width * depth];
         for (i = 0; i < uv.Length; i++) {
