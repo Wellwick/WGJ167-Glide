@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D22A7E44-F266-462B-892C-FC8EB47B1F4C}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{D22A7E44-F266-462B-892C-FC8EB47B1F4C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D22A7E44-F266-462B-892C-FC8EB47B1F4C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="WindTheme" ID="{FE7D3ADA-CECF-4DDA-A865-A3E3158F536F}">
+					<ChildrenList>
+						<Action Name="" ID="{8EDCC6F0-1289-4E24-98E1-0E4FBF99B9AF}" ShortID="122043511">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Back Theme" ID="{0DBCEBAF-78D2-456C-AB9F-DBA7F20B6E6F}" WorkUnitID="{94795B95-E32C-4D8D-A65B-1F45267876F9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

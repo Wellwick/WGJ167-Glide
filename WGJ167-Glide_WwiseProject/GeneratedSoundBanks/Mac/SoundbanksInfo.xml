@@ -20,6 +20,16 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2988929114" Name="WindTheme" ObjectPath="\Events\Default Work Unit\WindTheme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="804000063" Language="SFX">
+							<ShortName>wind theme.wav</ShortName>
+							<Path>SFX\wind theme_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

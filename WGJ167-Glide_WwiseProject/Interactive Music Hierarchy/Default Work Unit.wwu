@@ -1,6 +1,584 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{94795B95-E32C-4D8D-A65B-1F45267876F9}" SchemaVersion="97">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{94795B95-E32C-4D8D-A65B-1F45267876F9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{94795B95-E32C-4D8D-A65B-1F45267876F9}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Back Theme" ID="{0DBCEBAF-78D2-456C-AB9F-DBA7F20B6E6F}" ShortID="405259814">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="wind theme" ID="{5435F14E-6984-4C40-B0F3-60E9EE15B60D}" ShortID="394614235">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="245291.666666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="wind theme" ID="{895A32B0-7B9C-44ED-A558-AE3C32536BE0}" ShortID="329436582">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="wind theme" ID="{36BB82D3-DA00-4D60-B996-7150D1B7897B}">
+											<Language>SFX</Language>
+											<AudioFile>wind theme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804000063"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{0B6E7218-65CB-411E-B331-13D3C8D1225E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{AEAB8929-81D9-4A60-87C3-84F9FD12071E}">
+											<ClipList>
+												<MusicClip Name="wind theme" ID="{3E80EC42-F607-4FC0-9BBE-8255E1C1526B}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="56000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="wind theme" ID="{36BB82D3-DA00-4D60-B996-7150D1B7897B}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{0E8FDB18-0A55-4D08-AD28-73CC92B003C4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{B56D300A-8DF1-4F8D-AAAF-260C33BF9C5E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{037CCA02-ADFB-41DA-BCEC-FF3102B02B08}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{0507DAE5-5361-4B23-8D62-0396C8CD0D7E}"/>
+								<MusicCue Name="Exit Cue" ID="{01A83FE4-9420-4EBC-A5F8-1737C625859E}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="56000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="wind theme_01" ID="{750F8646-F0E5-4E9F-A942-1235A81F24A0}" ShortID="462550700">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="245828.409919767"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="wind theme" ID="{5BB06DA3-6F99-4DE3-A5B4-36FC287BAAFA}" ShortID="865533427">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="wind theme" ID="{921FA000-7559-45EE-B312-16C961AFE6B8}">
+											<Language>SFX</Language>
+											<AudioFile>wind theme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804000063"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{84B6FEAA-33EB-4E3A-B8DE-9306AA952CCB}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{6C0F9E7B-5AEE-4968-8ECB-6CA181E8FA18}">
+											<ClipList>
+												<MusicClip Name="wind theme" ID="{A6BD0F82-D643-470F-B013-C07A8A3F37C9}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="56000"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="128000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-56000"/>
+													</PropertyList>
+													<AudioSourceRef Name="wind theme" ID="{921FA000-7559-45EE-B312-16C961AFE6B8}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{7F0AC55C-E1C4-4C52-BFC4-189A9D91E587}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{0E55DF17-2327-424D-8149-A1D34B5A1EF1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{D68B72E5-71D1-4BA8-8101-8245E9955074}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>56</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{F83FC81E-0463-4099-83A4-D931152446AB}"/>
+								<MusicCue Name="Exit Cue" ID="{A3927013-765A-481F-94C1-360EE8DB8F3A}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="72000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="wind theme_02" ID="{C1A56C45-F60D-49A2-B485-8BEA3AF3C522}" ShortID="741466249">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="69004.0927739504"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="wind theme" ID="{2B83FAD4-568D-43FD-A459-5CD3186EB829}" ShortID="402635315">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="wind theme" ID="{5F83DBCE-48F7-4906-8653-F00816095863}">
+											<Language>SFX</Language>
+											<AudioFile>wind theme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804000063"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{E44ACF86-DBE6-4BCA-A022-DCF0373CB69B}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{BF11FF67-A8C6-4B9D-89B1-547AD69988B1}">
+											<ClipList>
+												<MusicClip Name="wind theme" ID="{5C5C0B5E-AE9E-430C-B8A4-5FBF9150CE29}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="128000"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="192000"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-128000"/>
+													</PropertyList>
+													<AudioSourceRef Name="wind theme" ID="{5F83DBCE-48F7-4906-8653-F00816095863}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{A6AC4566-64E9-4155-B5CB-6B274ACEE5C6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{0D36E5A6-29BA-421F-AA24-930287119B0F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{07208F63-B4D2-4BF4-A4A2-995222DB461E}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>128</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{EE28A5D4-CD6E-46F2-B913-EDC3149FE02D}"/>
+								<MusicCue Name="Exit Cue" ID="{5A5E095A-1CB6-460C-BD46-2E91A57ED27B}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="64000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="wind theme_03" ID="{88656B29-B8EE-41DE-A39B-E49D05544534}" ShortID="182390094">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="277291.666666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="wind theme" ID="{D23B7AA7-CE51-44E4-B64F-E4939D1A034B}" ShortID="435130737">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="wind theme" ID="{67613B2D-EFC4-4E87-A791-73DEA657F095}">
+											<Language>SFX</Language>
+											<AudioFile>wind theme.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804000063"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{35A6D56F-BCD5-43BF-A586-26A7FDD90A7A}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{CA43F0F9-5CDE-408B-860D-D49B5EBB324A}">
+											<ClipList>
+												<MusicClip Name="wind theme" ID="{8F6CA70E-A330-4705-B7EC-E14CDF486420}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="192000"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="245291.666666667"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="wind theme" ID="{67613B2D-EFC4-4E87-A791-73DEA657F095}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{13D7F5FD-9F3D-4563-99E7-E2463AE1FF4A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>245.291666666667</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{26F5E72D-F6F0-4A24-91BC-EA8F058B01CE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>245.291666666667</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{CADDA8BC-764D-4668-8FC2-3FD349493BDA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>192</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>245.291666666667</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{D56767BA-D018-499D-8984-42154B4C9504}">
+									<PropertyList>
+										<Property Name="TimeMs" Type="Real64" Value="192000"/>
+									</PropertyList>
+								</MusicCue>
+								<MusicCue Name="Exit Cue" ID="{CF561161-807D-45E4-B3F4-592325E7D86A}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="245291.666666667"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{D16CA1B0-3581-4BE9-84E4-5A51ADDA6F30}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{D80FEE19-3AFF-4D73-8F55-3340E5021BC8}">
+									<PropertyList>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{3360DF74-E9BD-4323-BE31-51DCDC26CBEC}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="1"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{AF780951-0A41-490C-960E-533D90639C71}">
+												<PropertyList>
+													<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{837ABBE4-D20F-40BC-9E15-460C32930484}" ShortID="341330502">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMode" Type="int16" Value="2"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{611002DC-6C4A-4BC8-BA3D-235EB29544CD}" ShortID="156070830">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="wind theme" ID="{5435F14E-6984-4C40-B0F3-60E9EE15B60D}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{DA72E665-BE03-49D5-8B08-71D789683B84}" ShortID="568977722">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="wind theme_01" ID="{750F8646-F0E5-4E9F-A942-1235A81F24A0}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{79AFD958-6469-490C-9BF5-8728FAFDCFC6}" ShortID="1034434213">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="wind theme_02" ID="{C1A56C45-F60D-49A2-B485-8BEA3AF3C522}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{9807C1F0-7EF6-4F9A-AA20-9432BA4D7E97}" ShortID="97508751">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="wind theme_03" ID="{88656B29-B8EE-41DE-A39B-E49D05544534}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

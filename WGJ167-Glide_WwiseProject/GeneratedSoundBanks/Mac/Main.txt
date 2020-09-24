@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2988929114	WindTheme			\Default Work Unit\WindTheme	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	804000063	wind theme	C:\Users\misun\Desktop\Early Projects\WGJ167-Glide\WGJ167-Glide_WwiseProject\.cache\Mac\SFX\wind theme_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Back Theme\wind theme\wind theme		3471288
+
