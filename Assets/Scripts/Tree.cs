@@ -22,6 +22,9 @@ public class Tree : MonoBehaviour
     [SerializeField, Range(1, 5)]
     private float rootLength;
 
+    [SerializeField, Range(3, 8)]
+    private int roots;
+
 
     private bool requestCalculate;
 
@@ -37,11 +40,9 @@ public class Tree : MonoBehaviour
         List<Vector3> vertices = new List<Vector3>();
         int index = 0;
         List<int> triangles = new List<int>();
-        Random.InitState(1);
-        int roots = Random.Range(3, 10);
         // Divide the 360 degrees into the amount of roots, then randomly select a root end point in that range.
         for (int i = 0; i < roots; i++, index += 4) {
-            float angle = Random.Range(360f / roots*i, 360f / roots*i+1);
+            float angle = Random.Range((360f / roots)*i, (360f / roots)*(i+1));
             Vector3 direction = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.forward;
             vertices.Add(direction.normalized * rootLength);
             vertices.Add(direction.normalized * trunkThickness + Vector3.up*(0.2f*rootLength));

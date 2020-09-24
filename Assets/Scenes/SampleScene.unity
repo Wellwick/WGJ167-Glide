@@ -362,6 +362,7 @@ MonoBehaviour:
   height: 3.5
   trunkThickness: 0.1
   rootLength: 1.5
+  roots: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
