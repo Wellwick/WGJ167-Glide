@@ -133,7 +133,7 @@ public class Tree : MonoBehaviour
                 localWidth *= 0.5f;
             }
             for (int j = 0; j < 4; j++) {
-                float angle = (90f * j) + Random.Range(25f, 65f);
+                float angle = (90f * j) + Random.Range(15f, 75f);
                 Vector3 direction = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.forward;
                 vertices[(i * 4) + j + 1] = direction * localWidth + Vector3.up * yPos;
             }
