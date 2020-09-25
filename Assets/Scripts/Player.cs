@@ -134,5 +134,6 @@ public class Player : MonoBehaviour {
         }
         instructions.text = "Press SPACEBAR\nto Restart\nYou collected " + butterflies.Count + " butterflies";
         butterflies.Clear();
+        Destroy(GetComponent<BoxCollider>());
     }
 }
