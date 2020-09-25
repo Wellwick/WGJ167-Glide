@@ -224,7 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8cc6130c69fc5448085807c20c665e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  maxSpeed: 16
+  speed: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e5eb524ba772bc248929bff7952ce311,
         type: 3}
       propertyPath: m_Name
-      value: squirrelA
+      value: Squirrel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5eb524ba772bc248929bff7952ce311, type: 3}
