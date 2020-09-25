@@ -157,10 +157,13 @@ MonoBehaviour:
   resolution: 0.5
   minHeight: 0
   maxHeight: 3
+  maxTreePerCell: 4
   noiseOffsetSeed: 12345
   zoom: 7
   player: {fileID: 286422248}
   grass: {fileID: 2100000, guid: 0dc6431f5f116f945a53667740f41eb6, type: 2}
+  treeWoodMaterial: {fileID: 2100000, guid: d7330421af460fa4a83bf905a1acd256, type: 2}
+  treeLeafMaterial: {fileID: 2100000, guid: 0532820b0fd5d744ba6ecbeda3990250, type: 2}
   requestCalculate: 1
 --- !u!4 &75727241
 Transform:
@@ -339,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953281410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.83, y: 0, z: -1.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
