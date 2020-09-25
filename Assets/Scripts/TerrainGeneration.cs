@@ -16,6 +16,9 @@ public class TerrainGeneration : MonoBehaviour
     [SerializeField]
     public float minHeight, maxHeight;
 
+    [SerializeField, Range(0,6)]
+    public int maxTreePerCell = 3;
+
     [SerializeField]
     public int noiseOffsetSeed = 12345;
 
@@ -26,7 +29,7 @@ public class TerrainGeneration : MonoBehaviour
     private Transform player;
 
     [SerializeField]
-    public Material grass;
+    public Material grass, treeWoodMaterial, treeLeafMaterial;
 
     private float xCellBuffer;
     

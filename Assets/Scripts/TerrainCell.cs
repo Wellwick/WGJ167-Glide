@@ -14,6 +14,8 @@ public class TerrainCell : MonoBehaviour
 
     private float resolution;
 
+    private List<Tree> trees;
+
     public void PrepareTerrainCell(TerrainGeneration tg) {
         this.tg = tg;
         if (transform.position.z >= 30f) {
@@ -34,6 +36,7 @@ public class TerrainCell : MonoBehaviour
         meshRenderer.sharedMaterial = tg.grass;
 
         meshFilter = gameObject.AddComponent<MeshFilter>();
+        trees = new List<Tree>();
     }
 
     public void CalculateMesh() {
@@ -117,5 +120,27 @@ public class TerrainCell : MonoBehaviour
         mesh.uv = uv;
 
         meshFilter.mesh = mesh;
+
+        foreach (Tree t in trees) {
+            Destroy(t.gameObject);
+        }
+        trees.Clear();
+        Random.InitState(transform.position.GetHashCode());
+        int treeCount = Random.Range(0, tg.maxTreePerCell);
+        for (i=0; i< treeCount; i++) {
+            Vector3 position = transform.position + vertices[Random.Range(0, vertices.Length)];
+            trees.Add(SpawnTree(position));
+        }
+    }
+
+    private Tree SpawnTree(Vector3 position) {
+        GameObject g = Instantiate(new GameObject("Tree"), position, Quaternion.identity, transform);
+        Tree t = g.AddComponent<Tree>();
+        float height = Random.Range(2f, 4f);
+        t.PrepareMesh(height, Random.Range(0.8f,1.2f)*height*0.1f, Random.Range(3,8), Random.Range(0.7f,1.5f)*height*0.5f, tg);
+        t.CalculateMesh();
+        t.PrepareLeafMesh();
+        t.CalculateLeafMesh();
+        return t;
     }
 }
