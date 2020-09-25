@@ -39,7 +39,8 @@ public class Tree : MonoBehaviour
         this.rootLength = rootLength;
         this.tg = tg;
         wood = tg.treeWoodMaterial;
-        leaves = tg.treeLeafMaterial;
+        leaves = new Material(tg.treeLeafMaterial);
+        leaves.color = new Color(Random.Range(0.3f, 0.8f), Random.Range(0.5f, 1.0f), Random.Range(0.2f, 0.4f), leaves.color.a);
         
         meshRenderer = gameObject.AddComponent<MeshRenderer>();
         meshRenderer.sharedMaterial = wood;
@@ -187,12 +188,8 @@ public class Tree : MonoBehaviour
 
         Vector2[] uv = new Vector2[vertices.Length];
         uv[0] = Vector2.zero;
-        uv[1] = new Vector2(0f, 0.5f);
-        uv[2] = new Vector2(0.5f, 0.5f);
-        uv[3] = new Vector2(1f, 0.5f);
-        uv[4] = new Vector2(0.5f, 0.5f);
-        for (int i=5; i < uv.Length-1; i++) {
-            uv[i] = new Vector2(i%2/2, (int)i/8);
+        for (int i=1; i < uv.Length-1; i++) {
+            uv[i] = new Vector2(((i-1)%4)*0.25f, ((int)((i-1)/4)*0.2f) );
         }
         uv[17] = Vector2.one;
 
