@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [SerializeField]
@@ -18,6 +19,9 @@ public class Player : MonoBehaviour {
 
     [SerializeField]
     private float butterflySpeedBoost = 3f;
+
+    [SerializeField]
+    private Text instructions;
 
     private Queue<Vector3> lastPositions;
     private Queue<float> xAngles;
@@ -55,6 +59,13 @@ public class Player : MonoBehaviour {
         if (!alive) {
             speed = Mathf.Clamp(speed - 0.2f * Time.deltaTime, 0f, 4f);
             transform.position += Vector3.up * Time.deltaTime * speed;
+            Color c = instructions.color;
+            c.a = Mathf.Clamp(c.a + Time.deltaTime * 0.1f, 0f, 1f);
+            instructions.rectTransform.localPosition = new Vector3(18, (c.a * 100f) - 100f);
+            instructions.color = c;
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+            }
             return;
         }
         direction.y = Input.GetAxis("Vertical") - (Mathf.Clamp(5f - (speed-4f) * 0.5f, 0.2f, 7f) * 0.3f);
@@ -116,6 +127,7 @@ public class Player : MonoBehaviour {
             b.transform.position = transform.position;
             b.Scatter();
         }
+        instructions.text = "Press SPACEBAR\nto Restart\nYou collected " + butterflies.Count + " butterflies";
         butterflies.Clear();
     }
 }

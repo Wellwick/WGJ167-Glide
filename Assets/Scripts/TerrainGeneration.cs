@@ -20,7 +20,7 @@ public class TerrainGeneration : MonoBehaviour
     public int maxTreePerCell = 3;
 
     [SerializeField]
-    public int noiseOffsetSeed = 12345;
+    public int noiseOffsetSeed;
 
     [SerializeField, Range(0.001f, 20f)]
     public float zoom = 1.0f;
@@ -43,6 +43,7 @@ public class TerrainGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         cells = new List<TerrainCell>();
+        noiseOffsetSeed = (int)(Random.value * 10000000f);
         xCellBuffer = player.position.x;
         float startX = xCellBuffer - (xCellBuffer % size.x);
         float startZ = player.position.z - (player.position.z % size.y);
