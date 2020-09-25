@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{B8DC71E1-ADBE-40D3-802F-5FDF8FECE112}">
 					<ObjectInclusionList>
 						<ObjectRef Name="WindTheme" ID="{FE7D3ADA-CECF-4DDA-A865-A3E3158F536F}" WorkUnitID="{D22A7E44-F266-462B-892C-FC8EB47B1F4C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Collect" ID="{E5D349BF-439A-4FD3-8961-7C97A6866A22}" WorkUnitID="{D22A7E44-F266-462B-892C-FC8EB47B1F4C}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

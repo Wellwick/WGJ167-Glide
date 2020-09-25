@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{12EA8998-11DC-4428-A886-CFA90791612A}" SchemaVersion="97">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{12EA8998-11DC-4428-A886-CFA90791612A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{12EA8998-11DC-4428-A886-CFA90791612A}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="WindVolume" ID="{EBA88A35-0DDB-4FAF-9507-CA0232DBDAFC}">
+					<PropertyList>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="71"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

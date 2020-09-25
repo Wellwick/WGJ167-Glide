@@ -3,6 +3,8 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{D10EE782-487E-42E6-8D99-5F03174200CB}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\misun\Desktop\Early Projects\WGJ167-Glide_Sound\"/>
+				<Property Name="Event Action List\{E5D349BF-439A-4FD3-8961-7C97A6866A22}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{FE7D3ADA-CECF-4DDA-A865-A3E3158F536F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -29,6 +31,7 @@
 				<Property Name="Interactive Music\x64_{5435F14E-6984-4C40-B0F3-60E9EE15B60D} - SegmentEditorZoomInfo" Type="string" Value="mpmZmZmZ8T8AAAAAAADwP1+E5Ic1zw1AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{750F8646-F0E5-4E9F-A942-1235A81F24A0} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP9J8rp5KTBNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{88656B29-B8EE-41DE-A39B-E49D05544534} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP9J8rp5KTBNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{AE409B79-7CF2-46FF-8239-81C4BBA9A45F} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP7fI4qWEiGVAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{C1A56C45-F60D-49A2-B485-8BEA3AF3C522} - SegmentEditorZoomInfo" Type="string" Value="F1100UUX7T8AAAAAAADwP9J8rp5KTBNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
@@ -39,6 +42,8 @@
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFilterVersion" Type="int32" Value="1"/>
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
 				<Property Name="Music Transition List\{0DBCEBAF-78D2-456C-AB9F-DBA7F20B6E6F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{3E29FFEF-CDE7-4035-B29B-98BB68885B91}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{9E5E1A51-44F1-438B-AFFF-6856A0F1AD0D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>

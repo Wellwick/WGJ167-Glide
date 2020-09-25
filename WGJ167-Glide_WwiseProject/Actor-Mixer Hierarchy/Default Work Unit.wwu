@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{56C3782A-75EE-4E7A-834B-C855629D7648}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{56C3782A-75EE-4E7A-834B-C855629D7648}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{56C3782A-75EE-4E7A-834B-C855629D7648}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="collect" ID="{36A636E1-CA9F-42C5-9A3E-B3DD81069135}" ShortID="327449094">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1E3F026F-BDE2-4331-B327-6C31CE7388AF}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="632"/>
+											<Property Name="Min" Type="Real64" Value="-859"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-22</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="collect" ID="{F38B39BE-004F-4C46-A40B-6F53059C0817}">
+							<Language>SFX</Language>
+							<AudioFile>collect.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1029509441"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="collect" ID="{F38B39BE-004F-4C46-A40B-6F53059C0817}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="lose" ID="{CCF71918-F405-413C-8EFD-9572DB591369}" ShortID="32266521">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>33</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>35</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2315E55F-70A7-40E4-998E-AE3DC2B172DF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E601E982-EF1E-4D0B-9637-90F776C2D44F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="lose" ID="{E063C28D-8167-40B7-BBAD-A11C3FF1632F}">
+							<Language>SFX</Language>
+							<AudioFile>lose.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="498870325"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="lose" ID="{E063C28D-8167-40B7-BBAD-A11C3FF1632F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

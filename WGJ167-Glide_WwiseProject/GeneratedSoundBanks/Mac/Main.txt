@@ -1,6 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
+	221232726	Lose			\Default Work Unit\Lose	
+	2756333705	Collect			\Default Work Unit\Collect	
 	2988929114	WindTheme			\Default Work Unit\WindTheme	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4122698001	WindVolume			\Default Work Unit\WindVolume	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	498870325	lose	C:\Users\misun\Desktop\Early Projects\WGJ167-Glide\WGJ167-Glide_WwiseProject\.cache\Mac\SFX\lose_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\lose		85292
 	804000063	wind theme	C:\Users\misun\Desktop\Early Projects\WGJ167-Glide\WGJ167-Glide_WwiseProject\.cache\Mac\SFX\wind theme_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Back Theme\wind theme\wind theme		3471288
+	949845076	main theme	C:\Users\misun\Desktop\Early Projects\WGJ167-Glide\WGJ167-Glide_WwiseProject\.cache\Mac\SFX\main theme_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\Game Theme\main theme\main theme		1763244
+	1029509441	collect	C:\Users\misun\Desktop\Early Projects\WGJ167-Glide\WGJ167-Glide_WwiseProject\.cache\Mac\SFX\collect_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\collect		16185
 

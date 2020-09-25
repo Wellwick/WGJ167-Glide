@@ -34,14 +34,15 @@ public class Player : MonoBehaviour {
         foreach (Transform t in transform) {
             if (t.name == "Squirrel") {
                 squirrel = t;
-            } else if (t.name == "Main Camera") {
+            }
+            else if (t.name == "Main Camera") {
                 camera = t.GetComponent<Camera>();
             }
         }
         speed = maxSpeed;
         lastPositions = new Queue<Vector3>();
         xAngles = new Queue<float>();
-        for (int i=0; i<lastPosLength; i++) {
+        for (int i = 0; i < lastPosLength; i++) {
             lastPositions.Enqueue(transform.position);
             xAngles.Enqueue(0f);
         }
@@ -52,14 +53,17 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        AkSoundEngine.SetRTPCValue("WindVolume", ((transform.position.y * 100) - 800) / 42);
         if (!alive) {
             speed = Mathf.Clamp(speed - 0.2f * Time.deltaTime, 0f, 4f);
             transform.position += Vector3.up * Time.deltaTime * speed;
             return;
         }
-        direction.y = Input.GetAxis("Vertical") - (Mathf.Clamp(5f - (speed-4f) * 0.5f, 0.2f, 7f) * 0.3f);
+        direction.y = Input.GetAxis("Vertical") - (Mathf.Clamp(5f - (speed - 4f) * 0.5f, 0.2f, 7f) * 0.3f);
         if (transform.position.y < 7f) {
             // Game over!
+            AkSoundEngine.StopPlayingID(themeID);
+            AkSoundEngine.PostEvent("Lose", gameObject);
             Destroy(squirrel.gameObject);
             alive = false;
             speed = 4f;
@@ -75,7 +79,7 @@ public class Player : MonoBehaviour {
         Vector3 sRotation = squirrel.localEulerAngles;
         sRotation.z = direction.y * -45f;
         squirrel.localEulerAngles = sRotation;
-        speed = Mathf.Clamp(speed - ((direction.y+0.1f) * Time.deltaTime*3f), 0, maxSpeed);
+        speed = Mathf.Clamp(speed - ((direction.y + 0.1f) * Time.deltaTime * 3f), 0, maxSpeed);
         float fovMultiplier = Mathf.Lerp(0.5f, 1.0f, speed / maxSpeed);
         float newFov = Mathf.Lerp(camera.fieldOfView, (60 * fovMultiplier), 0.1f);
         camera.fieldOfView = newFov;
@@ -100,6 +104,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
+        AkSoundEngine.PostEvent("Collect", gameObject);
         Butterfly newButterfly = other.gameObject.AddComponent<Butterfly>();
         speed = Mathf.Clamp(speed + butterflySpeedBoost, 0f, maxSpeed);
         Destroy(other.gameObject.GetComponent<BoxCollider>());

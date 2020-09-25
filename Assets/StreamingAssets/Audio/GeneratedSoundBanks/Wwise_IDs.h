@@ -13,8 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID COLLECT = 2756333705U;
+        static const AkUniqueID LOSE = 221232726U;
         static const AkUniqueID WINDTHEME = 2988929114U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID WINDVOLUME = 4122698001U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

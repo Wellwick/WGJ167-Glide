@@ -12,6 +12,35 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{FBB40573-0772-4681-8198-2E8BB9DA9FAF}" ShortID="814209544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main theme" ID="{5541BE1B-3FF8-4F55-8D8C-FC0823685919}" WorkUnitID="{94795B95-E32C-4D8D-A65B-1F45267876F9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Collect" ID="{E5D349BF-439A-4FD3-8961-7C97A6866A22}">
+					<ChildrenList>
+						<Action Name="" ID="{81F638EA-1537-4D12-BEDD-9E9BFF0ECA93}" ShortID="267701620">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="collect" ID="{36A636E1-CA9F-42C5-9A3E-B3DD81069135}" WorkUnitID="{56C3782A-75EE-4E7A-834B-C855629D7648}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lose" ID="{D1EF6578-2487-4345-AB1A-783AEB6BAFCD}">
+					<ChildrenList>
+						<Action Name="" ID="{C53ED3D5-5C48-4745-952D-68829204BAF1}" ShortID="829060868">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lose" ID="{CCF71918-F405-413C-8EFD-9572DB591369}" WorkUnitID="{56C3782A-75EE-4E7A-834B-C855629D7648}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

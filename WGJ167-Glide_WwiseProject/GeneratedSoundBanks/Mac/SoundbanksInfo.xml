@@ -21,15 +21,38 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2756333705" Name="Collect" ObjectPath="\Events\Default Work Unit\Collect" DurationType="OneShot" DurationMin="0.681360" DurationMax="1.612153">
+					<IncludedMemoryFiles>
+						<File Id="1029509441" Language="SFX">
+							<ShortName>collect.wav</ShortName>
+							<Path>SFX\collect_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="221232726" Name="Lose" ObjectPath="\Events\Default Work Unit\Lose" DurationType="OneShot" DurationMin="6.884694" DurationMax="6.884694">
+					<IncludedMemoryFiles>
+						<File Id="498870325" Language="SFX">
+							<ShortName>lose.wav</ShortName>
+							<Path>SFX\lose_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2988929114" Name="WindTheme" ObjectPath="\Events\Default Work Unit\WindTheme" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="804000063" Language="SFX">
 							<ShortName>wind theme.wav</ShortName>
 							<Path>SFX\wind theme_9EDFC787.wem</Path>
 						</File>
+						<File Id="949845076" Language="SFX">
+							<ShortName>main theme.wav</ShortName>
+							<Path>SFX\main theme_9EDFC787.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="4122698001" Name="WindVolume" ObjectPath="\Game Parameters\Default Work Unit\WindVolume"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
