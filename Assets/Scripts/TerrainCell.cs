@@ -25,6 +25,7 @@ public class TerrainCell : MonoBehaviour
         }
         PrepareMesh();
         CalculateMesh();
+        SpawnButterfly();
     }
 
     public Vector2 CellLocation() {
@@ -126,7 +127,7 @@ public class TerrainCell : MonoBehaviour
         }
         trees.Clear();
         Random.InitState(transform.position.GetHashCode());
-        int treeCount = Random.Range(0, tg.maxTreePerCell);
+        int treeCount = Random.Range(0, tg.maxTreePerCell + 1);
         for (i=0; i< treeCount; i++) {
             Vector3 position = transform.position + vertices[Random.Range(0, vertices.Length)];
             trees.Add(SpawnTree(position));
@@ -142,5 +143,13 @@ public class TerrainCell : MonoBehaviour
         t.PrepareLeafMesh();
         t.CalculateLeafMesh();
         return t;
+    }
+
+    private void SpawnButterfly() {
+        if (transform.position.z != 10f) {
+            return;
+        }
+        Vector3 spawnPoint = transform.position + new Vector3(5f, 0f, 5f) + (Vector3.up * Random.Range(10f, 25f));
+        Instantiate(tg.butterflyPrefab, spawnPoint, Quaternion.identity, transform);
     }
 }

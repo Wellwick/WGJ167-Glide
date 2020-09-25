@@ -31,6 +31,9 @@ public class TerrainGeneration : MonoBehaviour
     [SerializeField]
     public Material grass, treeWoodMaterial, treeLeafMaterial;
 
+    [SerializeField]
+    public GameObject butterflyPrefab;
+
     private float xCellBuffer;
     
     public bool requestCalculate;
